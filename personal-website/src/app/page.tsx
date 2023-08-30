@@ -1,10 +1,11 @@
 // Home page
-
+"use client"
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Type from "./components/Type"
+import './styles.css'
+
 
 export default function Home() {
   return (
@@ -12,10 +13,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       {/* Add other components like About, Portfolio, Contact, etc. */}
-    
-     {/* <Type/> */}
-      <button>Check my Resume</button>
-      <button>LinkedIn</button>
+    {/* <image src= "../../public/Assets/home-main.svg"></image> */}
+  
     </div>
   );
 }
