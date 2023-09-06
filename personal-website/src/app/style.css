@@ -500,3 +500,8 @@ html {
       padding-top: 0 !important;
     }
   }
+
+  .circular-image {
+    border-radius: 50%;
+   
+}

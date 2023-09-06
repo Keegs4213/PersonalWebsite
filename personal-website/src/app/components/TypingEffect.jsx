@@ -6,9 +6,9 @@ export default function TypingEffect() {
       <Typewriter
         options={{
           strings: [
-            "Junior Software Engineer",
-            "Junior Software Developer",
-            "Web Dev",
+            "Software Engineer",
+            "Software Developer",
+            "Full stack Developer",
           ],
           autoStart: true,
           loop: true,

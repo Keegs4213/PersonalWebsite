@@ -1,5 +1,7 @@
 import Typewriter from "./TypingEffect"
-import '../styles.css'
+import '../style.css'
+import { Button } from "react-bootstrap";
+
 
 export default function Hero() {
   return (
@@ -12,8 +14,8 @@ export default function Hero() {
           </span>
         </h1>
         <h2 className="text-xl text-gray-600">I'm a <Typewriter/></h2>
-        <button>Check my Resume</button>
-      <button>LinkedIn</button>
+        <Button>Check my Resume</Button>
+        <Button href="https://www.linkedin.com/in/keegan-greig/">LinkedIn</Button>
       {/* add light and dark mode button */}
       </div>
     </div>
