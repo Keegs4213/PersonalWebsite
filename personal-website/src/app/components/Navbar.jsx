@@ -1,41 +1,75 @@
-export default function Navbar() {
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import Link from "next/link";
+import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
+import { MdOutlineWorkOutline } from "react-icons/md";
+
+export default function NavBar() {
+  const [expand, updateExpanded] = useState(false);
+  const [navColour, updateNavbar] = useState(false);
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
+
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-purple-600 p-6">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <span className="font-semibold text-xl tracking-tight">
-          Keegan Greig
-        </span>
-      </div>
-      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div className="text-sm lg:flex-grow">
-          <a
-            href="/about"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            About
-          </a>
-          <a
-            href="/portfolio"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            Portfolio
-          </a>
-          <a
-            href="/contact"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
-          >
-            Contact
-          </a>
-        </div>
-        <div>
-          <a
-            href="#"
-            className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-          >
-            Check my Resume
-          </a>
-        </div>
-      </div>
-    </nav>
+    <Navbar
+      expanded={expand}
+      fixed="top"
+      expand="md"
+      className={navColour ? "sticky" : "navbar"}
+    >
+      <Container>
+        <Navbar.Brand href="/" className="d-flex"></Navbar.Brand>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={() => {
+            updateExpanded(expand ? false : "expanded");
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </Navbar.Toggle>
+      
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto" defaultActiveKey="#home">
+            <Nav.Item>
+              <Nav.Link as="div" onClick={() => updateExpanded(false)}>
+                <Link href="/">
+                  <AiOutlineHome /> Home
+                </Link>
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Link href="/about">
+                <AiOutlineUser style={{ marginBottom: "2px" }}/> About
+              </Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Link href="/portfolio">
+                <MdOutlineWorkOutline style={{ marginBottom: "2px" }}/> Portfolio
+              </Link>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }

@@ -1,6 +1,6 @@
-import Typewriter from "./TypingEffect"
-import '../style.css'
-import { Button } from "react-bootstrap";
+import Typewriter from "./TypingEffect";
+import "../style.css";
+import Image from "next/image";
 
 
 export default function Hero() {
@@ -13,10 +13,36 @@ export default function Hero() {
             👋🏻
           </span>
         </h1>
-        <h2 className="text-xl text-gray-600">I'm a <Typewriter/></h2>
-        <Button>Check my Resume</Button>
-        <Button href="https://www.linkedin.com/in/keegan-greig/">LinkedIn</Button>
-      {/* add light and dark mode button */}
+
+        <h2 className="text-xl text-blue-400">
+          I am a: <br></br>
+          <Typewriter />
+        </h2>
+
+        <div className="flex justify-center items-center mb-4">
+          <Image
+            src="/codingcartoon.svg"
+            alt="a picture"
+            width={400}
+            height={300}
+            className="codingCartoon"
+          ></Image>
+        </div>
+        <div>
+          
+          <a href="https://your-resume-link-here.com" target="_blank">
+          <button class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-500 rounded-full">
+  Check my Resume
+</button>
+          </a>
+          &nbsp; &nbsp;&nbsp;
+          <a href="https://www.linkedin.com/in/keegan-greig/" target="_blank">
+          <button class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-500 rounded-full">
+  Linked in
+</button>
+          </a>
+          {/* add light and dark mode button */}
+        </div>
       </div>
     </div>
   );

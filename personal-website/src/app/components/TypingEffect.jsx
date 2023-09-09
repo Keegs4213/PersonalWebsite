@@ -8,7 +8,7 @@ export default function TypingEffect() {
           strings: [
             "Software Engineer",
             "Software Developer",
-            "Full stack Developer",
+            "Full Stack Developer",
           ],
           autoStart: true,
           loop: true,

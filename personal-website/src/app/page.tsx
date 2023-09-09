@@ -1,37 +1,34 @@
 // Home page
 "use client";
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import Navbar from "./components/Navbar";
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import "./style.css";
 import Particle from "./components/Particle";
 import Footer from "./components/Footer";
-import Image from "next/image";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a network request to fetch data
+    setTimeout(() => {
+      setLoading(false);
+    }, 0);
+  }, []);
+
   return (
-    <section>
-      <Navbar />
-      {/* <Container fluid className="home-section" id="home"> */}
-        <Particle />
-        {/* <Container className="home-content"> */}
-          <Row>
-            <Col md={7} className="home-header">
-              {" "}
-              <Hero />
-            </Col>
-          </Row>
-          <div className="flex justify-between items-start py-15 px-1">
-            {/* <Image
-              src="/home-main.svg"
-              alt="a picture"
-              width={300}
-              height={300}
-            ></Image> */}
-          </div>{" "}
-        {/* </Container>{" "} */}
-      {/* </Container> */}
+    <section className="animated-bg">
+      {loading && <LoadingSpinner />}
+      <NavBar />
+      <Row>
+        <Col md={7} className="home-header">
+          <Hero />
+        </Col>
+      </Row>
+
       <Footer />
     </section>
   );
