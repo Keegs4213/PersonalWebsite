@@ -47,7 +47,7 @@ html {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
+  background-color: rgb(35, 22, 60);
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
@@ -64,6 +64,13 @@ html {
   display: flex;
   flex-direction: row !important;
   justify-content: space-evenly;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: center; /* Optional: to center the items vertically */
+  }
 }
 
 .navbar-toggler {
@@ -448,38 +455,12 @@ html {
   }
 }
 
-/* Tooltip container */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
 
 
 /* Background */
 .animated-bg {
   background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgb(255, 187, 109) 0%, rgb(252, 132, 132) 50%, rgba(252,176,69,1) 100%);
+  background: linear-gradient(90deg, rgb(253, 163, 60) 0%, rgb(252, 132, 132) 50%, rgb(255, 127, 127) 100%);
   background-repeat: no-repeat;
   background-size: 400% 400%;
   background-position: center;
@@ -500,4 +481,29 @@ html {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* Portfolio Cards */
+.card {
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.card img {
+  border-radius: 15px 15px 0 0; /* Rounded corners on the top side of the image */
+  max-width: 400px;
+}
+
+.card-body {
+  padding: 15px; /* Padding inside the card */
+}
+
+/* Styling the buttons */
+.card-body .btn {
+  margin: 5px; /* Margin around buttons */
 }

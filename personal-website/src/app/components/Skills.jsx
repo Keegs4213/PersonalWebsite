@@ -13,38 +13,33 @@ import {
 import { SiTypescript } from "react-icons/si";
 import "../style.css";
 
-function Skillset() {
+export default function Skillset() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        {/* Add tool tips that say name of tech when moused over */}
-        <DiJavascript1 />
+        <DiJavascript1 title="JavaScript" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiTypescript />
+        <SiTypescript title="TypeScript" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <DiReact title="React" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPhp />
+        <DiNodejs title="Node.js" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiHtml5 />
+        <DiPhp title="PHP" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiCss3 />
+        <DiHtml5 title="HTML5" />
       </Col>
-
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <DiCss3 title="CSS3" />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiGit title="Git" />
       </Col>
     </Row>
   );
 }
-
-export default Skillset;
