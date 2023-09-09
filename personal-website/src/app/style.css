@@ -54,7 +54,7 @@ html {
 }
 
 .navbar {
-  position: fixed !important;
+  position: relative !important;
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
@@ -63,6 +63,7 @@ html {
 .navbar-nav {
   display: flex;
   flex-direction: row !important;
+  justify-content: space-evenly;
 }
 
 .navbar-toggler {
@@ -134,16 +135,6 @@ html {
   color: white !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
-}
-
-.nav-link {
-  padding: 0.8rem 1rem !important;
-}
-
-@media (max-width: 767px) {
-  .nav-link {
-    padding: 0.7rem 1rem !important;
-  }
 }
 
 .navbar-nav .nav-item {
@@ -488,7 +479,7 @@ html {
 /* Background */
 .animated-bg {
   background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgb(103, 1, 171) 0%, rgb(255, 152, 152) 50%, rgba(252,176,69,1) 100%);
+  background: linear-gradient(90deg, rgb(255, 187, 109) 0%, rgb(252, 132, 132) 50%, rgba(252,176,69,1) 100%);
   background-repeat: no-repeat;
   background-size: 400% 400%;
   background-position: center;

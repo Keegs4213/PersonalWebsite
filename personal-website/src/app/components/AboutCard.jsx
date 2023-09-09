@@ -4,9 +4,10 @@ import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
   return (
+    <div>
     <Card className="quote-card-view">
       <Card.Body>
-        <blockquote className="blockquote mb-0" style={{ marginTop: "-15rem" }}>
+        <blockquote className="blockquote mb-0" style={{ marginTop: "-10rem" }}>
           <p style={{ textAlign: "justify" }}>
             Hello! I am <span className="purple">Keegan Greig </span>
             from <span className="purple"> Auckland, New Zealand.</span>
@@ -33,7 +34,7 @@ function AboutCard() {
           </ul>
         </blockquote>
       </Card.Body>
-    </Card>
+    </Card></div>
   );
 }
 

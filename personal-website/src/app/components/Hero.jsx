@@ -6,6 +6,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div className="h-screen flex justify-center items-center text-center">
+      
       <div>
         <h1 className="text-5xl mb-4">
           Hello! My name is Keegan
