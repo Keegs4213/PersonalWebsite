@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import Link from "next/link";
-import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
 import { MdOutlineWorkOutline } from "react-icons/md";
 
 export default function NavBar() {
@@ -65,6 +65,12 @@ export default function NavBar() {
             <Nav.Item>
               <Link href="/portfolio">
                 <MdOutlineWorkOutline style={{ marginBottom: "2px" }}/> Portfolio
+              </Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Link href="/contact">
+                <AiOutlineMessage style={{ marginBottom: "2px" }}/>Contact 
               </Link>
             </Nav.Item>
           </Nav>

@@ -1,66 +1,98 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-// import Particle from "../Particle";
-import Aboutcard from "../src/app/components/AboutCard";
+import React, {useState, useEffect} from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import AboutCard from "../src/app/components/AboutCard";
 import Tilt from "react-parallax-tilt";
 import "../src/app/style.css";
-import "../src/app/globals.css";
+import "../src/app/globals.css"
+import Particle from "../src/app/components/Particle"
 import Footer from "../src/app/components/Footer";
-import Skillset from "../src/app/components/Skills";
+import SkillSet from "../src/app/components/Skills";
 import Image from "next/image";
 import NavBar from "@/app/components/NavBar";
-
+// Add embed google map location 
 function About() {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 768);
+    };
+
+    // Set initial value
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   return (
     <div>
       <NavBar />
-
+      <Particle></Particle>
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        <Row className="flex-md-row flex-column align-items-center">
           <Col
-            md={7}
+            md={6}
             style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
             }}
           >
-           <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              About <strong className="purple">Me</strong>
-            </h1>
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <Tilt>
-                <Image
-                  src="/profile.jpg"
-                  alt="Picture of Me"
-                  className="circular-image"
-                  width={250}
-                  height={250}
-                />
-              </Tilt>
+            <div>
+              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+                About <strong className="purple">Me</strong>
+              </h1>
             </div>
-            <Aboutcard />
+            {!isLargeScreen && (
+              <div style={{ maxWidth: "100%" }}>
+                <Tilt>
+                  <Image
+                    src="/profile.jpg"
+                    alt="Picture of Me"
+                    className="circular-image"
+                    width={250}
+                    height={250}
+                  />
+                </Tilt>
+              </div>
+            )}
           </Col>
           <Col
-            md={5}
+            md={6}
             style={{
               display: "flex",
               justifyContent: "center",
-              alignItems: "flex-end",
+              alignItems: "center",
               overflow: "hidden",
               paddingTop: "20px",
               paddingBottom: "30px",
             }}
           >
-            
+            {isLargeScreen && (
+              <div style={{ maxWidth: "100%" }}>
+                <Tilt>
+                  <Image
+                    src="/profile.jpg"
+                    alt="Picture of Me"
+                    className="circular-image"
+                    width={250}
+                    height={250}
+                  />
+                </Tilt>
+              </div>
+            )}
+            <AboutCard />
           </Col>
         </Row>
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>
         </h1>
-        
-        <Skillset />
-
+        <SkillSet />
         <Footer></Footer>
       </Container>
     </div>

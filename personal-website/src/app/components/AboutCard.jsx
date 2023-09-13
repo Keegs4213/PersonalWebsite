@@ -7,7 +7,7 @@ function AboutCard() {
     <div>
     <Card className="quote-card-view">
       <Card.Body>
-        <blockquote className="blockquote mb-0" style={{ marginTop: "-10rem" }}>
+        <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
             Hello! I am <span className="purple">Keegan Greig </span>
             from <span className="purple"> Auckland, New Zealand.</span>

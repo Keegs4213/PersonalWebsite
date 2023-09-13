@@ -12,18 +12,28 @@ function Portfolio() {
       imageUrl: "/workoutwise.PNG",
       githubUrl: "https://github.com/yourusername/project1",
       liveUrl: "https://your-live-url1.com",
+      description: "abc",
     },
     {
       title: "Project 2",
       imageUrl: "faux.png",
       githubUrl: "https://github.com/yourusername/project2",
       liveUrl: "https://your-live-url2.com",
+      description: "abc",
     },
     {
       title: "Project 3",
       imageUrl: "/pokedex.png",
       githubUrl: "https://github.com/yourusername/project3",
       liveUrl: "https://your-live-url3.com",
+      description: "abc",
+    },
+    {
+      title: "Project 4",
+      imageUrl: "/backend.png",
+      githubUrl: "",
+      liveUrl: "",
+      description: "abc",
     },
   ];
 
@@ -39,9 +49,10 @@ function Portfolio() {
                 src={project.imageUrl}
                 className="rounded-top"
               />
-            
+
               <Card.Body>
                 <Card.Title>{project.title}</Card.Title>
+                <Card.Text>{project.description}</Card.Text>
                 <Button
                   variant="primary"
                   href={project.githubUrl}
