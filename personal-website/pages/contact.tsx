@@ -14,11 +14,11 @@ function Contact() {
   });
 
   // Function to handle form submission
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Send formData to your server using a fetch or axios
+      // Send formData to your server using fetch or axios
       const response = await fetch("/your-api-endpoint", {
         method: "POST",
         headers: {
@@ -40,7 +40,7 @@ function Contact() {
   };
 
   // Function to handle form input changes
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -77,7 +77,7 @@ function Contact() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              padding: "20px",
+              padding: "60px 20px",
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
@@ -88,71 +88,109 @@ function Contact() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                maxWidth: "400px",
+                maxWidth: "800px", // Increasing maxWidth
+                width: "100%", // Set width to 100%
                 margin: "0 auto",
               }}
             >
               {/* Contact Information */}
               <div style={{ marginBottom: "20px", textAlign: "center" }}>
-                <h2>Email: keegangreig3@gmail.com</h2>
-                <h2>Phone: +(64) 0210 756 333</h2>
+                <h2 style={{ fontSize: "1.2rem" }}>
+                  {" "}
+                  <strong className="purple">Email:</strong>{" "}
+                  keegangreig3@gmail.com
+                </h2>
+                <h2 style={{ fontSize: "1.2rem" }}>
+                  {" "}
+                  <strong className="purple">Phone:</strong> +(64) 0210 756 333
+                </h2>
               </div>
 
               {/* Contact Form */}
-              <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                  <label htmlFor="name" className="form-label">
-                    Name
+              <form onSubmit={handleSubmit} style={{ width: "100%" }}>
+                {" "}
+                {/* Set width to 100% */}
+                <div className="mb-4" style={{ width: "100%" }}>
+                  <label
+                    htmlFor="name"
+                    className="form-label"
+                    style={{ fontSize: "1.5rem" }}
+                  >
+                    <strong className="purple">Name</strong>
                   </label>
-                  <br></br>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     className="form-input"
+                    style={{
+                      width: "100%",
+                      fontSize: "1.2rem",
+                      padding: "20px",
+                    }} // Increased padding
                     required
                     value={formData.name}
                     onChange={handleInputChange}
                   />
                 </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className="form-label">
-                    Email
+                <div className="mb-4" style={{ width: "100%" }}>
+                  <label
+                    htmlFor="email"
+                    className="form-label"
+                    style={{ fontSize: "1.5rem" }}
+                  >
+                    <strong className="purple">Email</strong>
                   </label>
-                  <br></br>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     className="form-input"
+                    style={{
+                      width: "100%",
+                      fontSize: "1.2rem",
+                      padding: "20px",
+                    }} // Increased padding
                     required
                     value={formData.email}
                     onChange={handleInputChange}
                   />
                 </div>
-                <div className="mb-4">
-                  <label htmlFor="message" className="form-label">
-                    Message
+                <div className="mb-4" style={{ width: "100%" }}>
+                  <label
+                    htmlFor="message"
+                    className="form-label"
+                    style={{ fontSize: "1.5rem" }}
+                  >
+                    <strong className="purple">Message</strong>
                   </label>
-                  <br></br>
                   <textarea
                     id="message"
                     name="message"
-                    rows={4}
+                    rows={6}
                     className="form-input"
+                    style={{
+                      width: "100%",
+                      fontSize: "1.2rem",
+                      padding: "20px",
+                    }} // Increased padding
                     required
                     value={formData.message}
                     onChange={handleInputChange}
                   ></textarea>
                 </div>
-                <button
-                  type="submit"
-                  className="custom-button github"
-                  style={{ marginTop: "10px" }}
-                >
-                  Submit
-                </button>
               </form>
+              <button
+                type="submit"
+                className="custom-button github"
+                style={{
+                  marginTop: "10px",
+                  fontSize: "1.2rem",
+                  padding: "10px 20px",
+                }}
+              >
+                Submit
+              </button>
             </div>
           </div>
           <Footer></Footer>

@@ -65,7 +65,9 @@ function Portfolio() {
         <LoadingSpinner />
       ) : (
         <>
-          <Navigation></Navigation>
+          <Navigation></Navigation> <h1 style={{ fontSize: "2.1em", textAlign: "center" }}>
+                      My <strong className="purple">Projects</strong>
+                    </h1>
           <div
             style={{
               display: "flex",

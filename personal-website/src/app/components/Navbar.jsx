@@ -34,16 +34,16 @@ export default function Navigation() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex"></Navbar.Brand>
-        <Navbar.Toggle
+        {/* <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
             updateExpanded(expand ? false : "expanded");
           }}
-        >
+        > */}
+          {/* <span></span>
           <span></span>
-          <span></span>
-          <span></span>
-        </Navbar.Toggle>
+          <span></span> */}
+        {/* </Navbar.Toggle> */}
 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">

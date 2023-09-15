@@ -57,7 +57,7 @@ html {
   background-color: rgb(35, 22, 60);
   position: relative !important;
   transition: all 0.3s ease-out 0s !important;
-  padding: 0.3rem 2rem !important;
+  padding: 1.5rem 2rem 0.3rem 2rem !important; 
   font-size: 1.2rem !important;
 }
 
@@ -219,13 +219,6 @@ html {
   }
 }
 
-
-
-
-
-
-
-
 /* Type Writer */
 .Typewriter__wrapper {
   font-size: 2.2em !important;
@@ -248,8 +241,6 @@ html {
   }
 }
 
-
-
 /* H1 Media queries*/
 @media (max-width: 768px) {
   #h1 {
@@ -259,15 +250,10 @@ html {
 
 /* Small screens */
 @media (max-width: 576px) {
-  #h1  {
+  #h1 {
     font-size: 1.8em;
   }
 }
-
-
-
-
-
 
 .home-about-body {
   padding-top: 50px;
@@ -280,7 +266,6 @@ html {
   padding-top: 25px;
   color: white !important;
 }
-
 
 .home-social-icons {
   position: relative !important;
@@ -325,7 +310,6 @@ html {
   padding-right: 15px;
   padding-left: 15px;
 }
-
 
 /* --------- */
 /* Footer */
@@ -381,7 +365,6 @@ html {
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
-  
 }
 
 .tech-icons {
@@ -435,7 +418,7 @@ html {
 .about-activity {
   display: flex;
   align-items: center;
-  margin-bottom: 0.2rem; 
+  margin-bottom: 0.2rem;
   box-shadow: 4px rgba(89, 4, 168, 0.137) !important;
 }
 
@@ -464,11 +447,9 @@ html {
   }
 }
 
-
-
 .codingCartoon {
-  height: auto; 
-  max-width: 100%; 
+  height: auto;
+  max-width: 100%;
 }
 
 .spinner {
@@ -485,17 +466,23 @@ html {
 }
 
 @keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
-
-
-
 
 /* Background */
 .animated-bg {
-  background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgb(253, 163, 60) 0%, rgb(252, 132, 132) 50%, rgb(255, 127, 127) 100%);
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgb(253, 163, 60) 0%,
+    rgb(252, 132, 132) 50%,
+    rgb(255, 127, 127) 100%
+  );
   background-repeat: no-repeat;
   background-size: 400% 400%;
   background-position: center;
@@ -567,7 +554,7 @@ html {
 }
 
 .project-card:hover {
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .custom-button {
@@ -577,7 +564,7 @@ html {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: inline-block;
-  transition: box-shadow 0.3s, transform 0.3s; 
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .custom-button:hover {
@@ -587,28 +574,33 @@ html {
 
 .custom-button.github {
   background: #1e90ff;
-  color: #fff; 
-  border: 2px solid #0056b3; 
+  color: #fff;
+  border: 2px solid #0056b3;
   border-bottom-width: 0.25rem;
 }
 
 .custom-button.live {
-  background-color: #28a745; 
-  color: #fff; 
-  border: 2px solid #047857; 
+  background-color: #28a745;
+  color: #fff;
+  border: 2px solid #047857;
   border-bottom-width: 0.25rem;
 }
 
 .custom-button.live:hover {
-  background-color: #68d391; 
-  border-color: #1c7c30; 
+  background-color: #68d391;
+  border-color: #1c7c30;
 }
 .custom-button.github:hover {
-  background-color: #1eb8ff; 
-  border-color: #1c1f7c; 
+  background-color: #1eb8ff;
+  border-color: #1c1f7c;
 }
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .project-cards-container {
     flex-direction: column;
   }
+}
+
+/*Form*/
+.form-input {
+  color: black !important;
 }
