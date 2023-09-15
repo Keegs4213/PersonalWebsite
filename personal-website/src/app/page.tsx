@@ -2,7 +2,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
-import NavBar from "./components/Navbar";
+import Navigation from "./components/Navbar";
 import Hero from "./components/Hero";
 import "./style.css";
 import Footer from "./components/Footer";
@@ -24,7 +24,7 @@ export default function Home() {
         <LoadingSpinner />
       ) : (
         <>
-          <NavBar />
+          <Navigation />
           <Row>
             <Col md={7} className="home-header">
               <Hero />

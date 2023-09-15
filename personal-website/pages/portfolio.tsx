@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "../src/app/components/Navbar";
+import Navigation from "../src/app/components/Navbar";
 import "../src/app/style.css";
 import "../src/app/globals.css";
 import Footer from "../src/app/components/Footer";
@@ -65,7 +65,7 @@ function Portfolio() {
         <LoadingSpinner />
       ) : (
         <>
-          <NavBar></NavBar>
+          <Navigation></Navigation>
           <div
             style={{
               display: "flex",

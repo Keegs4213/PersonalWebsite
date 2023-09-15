@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
 import { MdOutlineWorkOutline } from "react-icons/md";
 
-export default function NavBar() {
+export default function Navigation() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 

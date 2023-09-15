@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import AboutCard from "../src/app/components/AboutCard";
 import Tilt from "react-parallax-tilt";
 import "../src/app/style.css";
@@ -8,7 +8,7 @@ import Particle from "../src/app/components/Particle";
 import Footer from "../src/app/components/Footer";
 import SkillSet from "../src/app/components/Skills";
 import Image from "next/image";
-import NavBar from "../src/app/components/Navbar";
+import Navigation from "../src/app/components/Navbar";
 import LoadingSpinner from "../src/app/components/LoadingSpinner";
 // Add embed google map location
 function About() {
@@ -42,82 +42,91 @@ function About() {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyItems: "space-around"
       }}
     >
       {loading ? (
         <LoadingSpinner />
       ) : (
         <>
-          <NavBar />
-          <Particle></Particle>
-          <Container>
-            <Row className="flex-md-row flex-column align-items-center">
-              <Col
-                md={6}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  textAlign: "center",
-                }}
-              >
-                <div>
-                  <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-                    About <strong className="purple">Me</strong>
-                  </h1>
-                </div>
-                {!isLargeScreen && (
-                  <div style={{ maxWidth: "100%" }}>
-                    <Tilt>
-                      <Image
-                        src="/profile.jpg"
-                        alt="Picture of Me"
-                        className="circular-image"
-                        width={250}
-                        height={250}
-                      />
-                    </Tilt>
+          <Navigation />
+          <div
+            style={{
+              flex: 1, // Added this to ensure content takes up all available space
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Container>
+              <Row className="flex-md-row flex-column align-items-center justify-content-center">
+                <Col
+                  md={6}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                >
+                  <div>
+                    <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+                      About <strong className="purple">Me</strong>
+                    </h1>
                   </div>
-                )}
-              </Col>
-              <Col
-                md={6}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  overflow: "hidden",
-                  paddingTop: "20px",
-                  paddingBottom: "30px",
-                }}
-              >
-                {isLargeScreen && (
-                  <div style={{ maxWidth: "100%" }}>
-                    <Tilt>
-                      <Image
-                        src="/profile.jpg"
-                        alt="Picture of Me"
-                        className="circular-image"
-                        width={250}
-                        height={250}
-                      />
-                    </Tilt>
-                  </div>
-                )}
-                <AboutCard />
-              </Col>
-            </Row>
-            <h1 className="project-heading">
+                  {!isLargeScreen && (
+                    <div style={{ maxWidth: "100%" }}>
+                      <Tilt>
+                        <Image
+                          src="/profile.jpg"
+                          alt="Picture of Me"
+                          className="circular-image"
+                          width={250}
+                          height={250}
+                        />
+                      </Tilt>
+                    </div>
+                  )}
+                </Col>
+                <Col
+                  md={6}
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    overflow: "hidden",
+                    paddingTop: "20px",
+                    paddingBottom: "30px",
+                  }}
+                >
+                  {isLargeScreen && (
+                    <div style={{ maxWidth: "100%" }}>
+                      <Tilt>
+                        <Image
+                          src="/profile.jpg"
+                          alt="Picture of Me"
+                          className="circular-image"
+                          width={250}
+                          height={250}
+                        />
+                      </Tilt>
+                    </div>
+                  )}
+                  <AboutCard />
+                </Col>
+              </Row>
+              <h1 className="project-heading">
               Professional <strong className="purple">Skillset </strong>
             </h1>
             <SkillSet />
-            <Footer></Footer>
           </Container>
-        </>
-      )}
-    </div>
-  );
+        </div>
+        <Footer></Footer> {/* Moved footer outside the div and container */}
+      </>
+    )}
+  </div>
+);
 }
 
 export default About;
