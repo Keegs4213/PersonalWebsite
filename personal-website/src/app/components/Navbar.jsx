@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import Link from "next/link";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
