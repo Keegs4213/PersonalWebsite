@@ -1,12 +1,11 @@
-import React, {useState, useEffect} from "react";
-import NavBar from "../src/app/components/NavBar";
+import React, { useState, useEffect } from "react";
+import NavBar from "../src/app/components/Navbar";
 import "../src/app/style.css";
 import "../src/app/globals.css";
 import Footer from "../src/app/components/Footer";
 import LoadingSpinner from "../src/app/components/LoadingSpinner";
 
 function Portfolio() {
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -38,14 +37,16 @@ function Portfolio() {
       imageUrl: "/pokedex.png",
       githubUrl: "https://github.com/Keegs4213/Pokedex-Frontend",
       liveUrl: "https://keegs4213.github.io/Pokedex-Frontend/",
-      description: "This was my first project I built using Javascript, HTML+CSS and Bootstrap utilising the Pokemon API to fetch and display characteristics of pokemon like name, height, weight, id, type and moves. You can search pokemon by name or use the drop down selector to display certain types of pokemon. If you are unfamiliar with Pokemon this is basically an encylopedia for Pokemon ",
+      description:
+        "This was my first project I built using Javascript, HTML+CSS and Bootstrap utilising the Pokemon API to fetch and display characteristics of pokemon like name, height, weight, id, type and moves. You can search pokemon by name or use the drop down selector to display certain types of pokemon. If you are unfamiliar with Pokemon this is basically an encylopedia for Pokemon ",
     },
     {
       title: "Project 4 - Monster Hunter Backend",
       imageUrl: "/backend.png",
       githubUrl: "https://github.com/Keegs4213/Monster-Hunter-Backend",
       liveUrl: "",
-      description: "This is a backend only application I created using Nodejs, Express, MongoDB and Swagger. I created multiple routes for users to create, read, upload, delete their favorite monsters and weapons from the Monster Hunter World game. Users can create a profile and add/remove their favorites to their profile and use specific routes to return a users favorites.",
+      description:
+        "This is a backend only application I created using Nodejs, Express, MongoDB and Swagger. I created multiple routes for users to create, read, upload, delete their favorite monsters and weapons from the Monster Hunter World game. Users can create a profile and add/remove their favorites to their profile and use specific routes to return a users favorites.",
     },
   ];
 
@@ -58,90 +59,94 @@ function Portfolio() {
         flexDirection: "column",
         justifyContent: "space-between",
       }}
-    > {loading ? (
-      <LoadingSpinner />
-    ) : (
-      <>
-      <NavBar></NavBar>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: "20px 0",
-          flexWrap: "wrap", // Allow cards to wrap to the next row
-        }}
-        className="project-cards-container"
-      >
-        {projects.map((project, index) => (
+    >
+      {" "}
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <>
+          <NavBar></NavBar>
           <div
-            key={index}
-            className="project-card"
             style={{
-              flex: 1,
-              margin: "0 8px",
-              background: "#fff",
-              borderRadius: "15px",
-              overflow: "hidden",
-              marginBottom: "20px",
               display: "flex",
-              flexDirection: "column",
+              justifyContent: "space-between",
+              padding: "20px 0",
+              flexWrap: "wrap", // Allow cards to wrap to the next row
             }}
+            className="project-cards-container"
           >
-            <img
-              style={{ width: "100%", height: "200px", objectFit: "cover" }}
-              src={project.imageUrl}
-              alt={project.title}
-            />
-            <div className="project-card-body" style={{ padding: "16px" }}>
+            {projects.map((project, index) => (
               <div
+                key={index}
+                className="project-card"
                 style={{
-                  display: "flex",
-                  flexDirection: "column", // Stack elements vertically
                   flex: 1,
+                  margin: "0 8px",
+                  background: "#fff",
+                  borderRadius: "15px",
+                  overflow: "hidden",
+                  marginBottom: "20px",
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
-                <h2
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    marginBottom: "16px",
-                  }}
-                  className="purple"
-                >
-                  {project.title}
-                </h2>
-                <p style={{ marginBottom: "16px", color: "#666" }}>
-                  {project.description}
-                </p>
-                <div style={{ display: "flex", gap: "8px", marginTop: "auto" }}>
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="button custom-button github"
+                <img
+                  style={{ width: "100%", height: "200px", objectFit: "cover" }}
+                  src={project.imageUrl}
+                  alt={project.title}
+                />
+                <div className="project-card-body" style={{ padding: "16px" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column", // Stack elements vertically
+                      flex: 1,
+                    }}
+                  >
+                    <h2
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "600",
+                        marginBottom: "16px",
+                      }}
+                      className="purple"
                     >
-                      GitHub
-                    </a>
-                  )}
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="button custom-button live"
+                      {project.title}
+                    </h2>
+                    <p style={{ marginBottom: "16px", color: "#666" }}>
+                      {project.description}
+                    </p>
+                    <div
+                      style={{ display: "flex", gap: "8px", marginTop: "auto" }}
                     >
-                      Live
-                    </a>
-                  )}
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="button custom-button github"
+                        >
+                          GitHub
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="button custom-button live"
+                        >
+                          Live
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <Footer></Footer>
-      </>
+          <Footer></Footer>
+        </>
       )}
     </div>
   );
