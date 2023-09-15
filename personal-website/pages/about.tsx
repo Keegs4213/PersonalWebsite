@@ -8,7 +8,7 @@ import Particle from "../src/app/components/Particle"
 import Footer from "../src/app/components/Footer";
 import SkillSet from "../src/app/components/Skills";
 import Image from "next/image";
-import NavBar from "@/app/components/NavBar";
+import NavBar from "../src/app/components/NavBar";
 import LoadingSpinner from "../src/app/components/LoadingSpinner";
 // Add embed google map location 
 function About() {

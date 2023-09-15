@@ -3,7 +3,7 @@ import NavBar from "@/app/components/NavBar";
 import "../src/app/style.css";
 import "../src/app/globals.css";
 import Footer from "../src/app/components/Footer";
-import LoadingSpinner from "@/app/components/LoadingSpinner";
+import LoadingSpinner from "../src/app/components/LoadingSpinner";
 
 function Portfolio() {
 

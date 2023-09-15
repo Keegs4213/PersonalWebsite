@@ -1,11 +1,10 @@
 // Home page
 "use client";
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Row, Col, } from "react-bootstrap";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import "./style.css";
-import Particle from "./components/Particle";
 import Footer from "./components/Footer";
 import LoadingSpinner from "./components/LoadingSpinner";
 
