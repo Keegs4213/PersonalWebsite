@@ -8,7 +8,7 @@ export default function Hero() {
     <div className="h-screen flex justify-center items-center text-center">
       
       <div>
-        <h1 className="text-5xl mb-4">
+        <h1 className="text-5xl mb-4" id="h1">
           Hello! My name is Keegan
           <span className="wave" role="img" aria-labelledby="wave">
             👋🏻
@@ -17,9 +17,9 @@ export default function Hero() {
 
         <h2 className="text-xl text-blue-400">
           I am a: <br></br>
-          <Typewriter />
+        
         </h2>
-
+  <Typewriter />
         <div className="flex justify-center items-center mb-4">
           <Image
             src="/codingcartoon.svg"
@@ -42,7 +42,6 @@ export default function Hero() {
   Linked in
 </button>
           </a>
-          {/* add light and dark mode button */}
         </div>
       </div>
     </div>

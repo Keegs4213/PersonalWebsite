@@ -9,9 +9,18 @@ import Footer from "../src/app/components/Footer";
 import SkillSet from "../src/app/components/Skills";
 import Image from "next/image";
 import NavBar from "@/app/components/NavBar";
+import LoadingSpinner from "../src/app/components/LoadingSpinner";
 // Add embed google map location 
 function About() {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a network request to fetch data
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Simulate a 1-second loading delay
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,15 +30,24 @@ function About() {
     // Set initial value
     handleResize();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
 
   return (
-    <div>
+    <div  style={{
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+    }}>
+     {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <>
       <NavBar />
       <Particle></Particle>
       <Container>
@@ -95,6 +113,8 @@ function About() {
         <SkillSet />
         <Footer></Footer>
       </Container>
+      </>
+      )}
     </div>
   );
 }

@@ -15,7 +15,7 @@ import "../style.css";
 
 export default function Skillset() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+    <Row className="tech-icon-row" style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 title="JavaScript" />
       </Col>

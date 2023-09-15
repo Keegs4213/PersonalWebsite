@@ -16,20 +16,24 @@ export default function Home() {
     // Simulate a network request to fetch data
     setTimeout(() => {
       setLoading(false);
-    }, 0);
+    }, 1000); // Simulate a 1-second loading delay
   }, []);
 
   return (
     <section className="animated-bg">
-      {loading && <LoadingSpinner />}
-      <NavBar />
-      <Row>
-        <Col md={7} className="home-header">
-          <Hero />
-        </Col>
-      </Row>
-
-      <Footer />
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <>
+          <NavBar />
+          <Row>
+            <Col md={7} className="home-header">
+              <Hero />
+            </Col>
+          </Row>
+          <Footer />
+        </>
+      )}
     </section>
   );
 }

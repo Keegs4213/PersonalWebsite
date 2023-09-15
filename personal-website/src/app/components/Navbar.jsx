@@ -45,11 +45,15 @@ export default function NavBar() {
           <span></span>
           <span></span>
         </Navbar.Toggle>
-      
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as="div" onClick={() => updateExpanded(false)}>
+              <Nav.Link
+                className="custom-nav-link"
+                as={"div"}
+                onClick={() => updateExpanded(false)}
+              >
                 <Link href="/">
                   <AiOutlineHome /> Home
                 </Link>
@@ -57,21 +61,32 @@ export default function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <Link href="/about">
-                <AiOutlineUser style={{ marginBottom: "2px" }}/> About
-              </Link>
+              <Nav.Link
+                className="custom-nav-link"
+                as="div"
+                onClick={() => updateExpanded(false)}
+              >
+                <Link href="/about">
+                  <AiOutlineUser /> About
+                </Link>
+              </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Link href="/portfolio">
-                <MdOutlineWorkOutline style={{ marginBottom: "2px" }}/> Portfolio
-              </Link>
+              <Nav.Link as="div" onClick={() => updateExpanded(false)}>
+                <Link href="/portfolio">
+                  <MdOutlineWorkOutline /> Portfolio
+                </Link>
+              </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Link href="/contact">
-                <AiOutlineMessage style={{ marginBottom: "2px" }}/>Contact 
-              </Link>
+              <Nav.Link as="div" onClick={() => updateExpanded(false)}>
+                <Link href="/contact">
+                  <AiOutlineMessage />
+                  Contact
+                </Link>
+              </Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

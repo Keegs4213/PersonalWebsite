@@ -175,6 +175,12 @@ html {
   width: 100%;
 }
 
+.custom-nav-link {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  margin-right: 20px !important;
+}
+
 /* --------- */
 /* Home section */
 /* --------- */
@@ -233,23 +239,32 @@ html {
 
 @media (max-width: 767px) {
   .Typewriter__wrapper {
-    font-size: 1.4em !important;
+    font-size: 2em !important;
     font-weight: 500 !important;
-    position: absolute !important;
+    position: relative !important;
   }
   .Typewriter__cursor {
-    display: none !important;
+    display: relative !important;
   }
 }
 
 
 
-@media (max-width: 767px) {
-  .myAvtar {
-    padding-top: 2em !important;
-    padding-bottom: 2em !important;
+/* H1 Media queries*/
+@media (max-width: 768px) {
+  #h1 {
+    font-size: 2.5em;
   }
 }
+
+/* Small screens */
+@media (max-width: 576px) {
+  #h1  {
+    font-size: 1.8em;
+  }
+}
+
+
 
 
 
@@ -384,6 +399,14 @@ html {
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+  text-align: center !important;
+}
+.tech-icon-row {
+  justify-content: center;
+  text-align: center;
+}
+.project-heading {
+  text-align: center;
 }
 
 @media (max-width: 767px) {
@@ -444,35 +467,28 @@ html {
 
 
 .codingCartoon {
-  width: 25vw;
   height: auto; 
   max-width: 100%; 
 }
 
 .spinner {
   border: 16px solid #f3f3f3;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #8a2be2; /* Change to your desired purple color */
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #3498db;
-  border-radius: 50%;
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
 
 
 
@@ -515,22 +531,84 @@ html {
 
 .card img {
   border-radius: 15px 15px 0 0; /* Rounded corners on the top side of the image */
-  max-width: 400px;
+  width: 50%; /* Ensure the image doesn't overflow the card */
+  max-height: 100px; /* Set a fixed height */
+  object-fit: cover; /* Maintain aspect ratio while covering the space */
 }
 
 .card-body {
   padding: 15px; /* Padding inside the card */
 }
 
-/* Styling the buttons */
 .card-body .btn {
   margin: 5px; /* Margin around buttons */
 }
+.project-card {
+  border: 1.7px solid rgba(200, 137, 230, 0.637);
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
+  transition: all 0.4s ease 0s;
+  border-radius: 15px; /* Keeping the border radius as 15px to match your existing style */
+  overflow: hidden; /* Hide overflow content to prevent clipping during hover */
+  transform: scale(1); /* Initial scale */
+}
 
-#tsparticles {
-  position: fixed !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  width: 100%;
-  height: 100%;
+.project-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.04); /* Scale up on hover */
+}
+.project-card img {
+  border-radius: 15px 15px 0 0; /* Rounded corners on the top side of the image */
+  width: 100%; /* Ensure the image doesn't overflow the card */
+  max-height: 200px; /* Adjusted to match your existing style */
+  object-fit: cover; /* Maintain aspect ratio while covering the space */
+}
+.project-card-body {
+  padding: 15px; /* Padding inside the card */
+}
+
+.project-card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.custom-button {
+  padding: 8px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  transition: box-shadow 0.3s, transform 0.3s; 
+}
+
+.custom-button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.custom-button.github {
+  background: #1e90ff;
+  color: #fff; 
+  border: 2px solid #0056b3; 
+  border-bottom-width: 0.25rem;
+}
+
+.custom-button.live {
+  background-color: #28a745; 
+  color: #fff; 
+  border: 2px solid #047857; 
+  border-bottom-width: 0.25rem;
+}
+
+.custom-button.live:hover {
+  background-color: #68d391; 
+  border-color: #1c7c30; 
+}
+.custom-button.github:hover {
+  background-color: #1eb8ff; 
+  border-color: #1c1f7c; 
+}
+@media (max-width: 850px) {
+  .project-cards-container {
+    flex-direction: column;
+  }
 }
