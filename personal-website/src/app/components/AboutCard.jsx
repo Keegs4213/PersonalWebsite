@@ -23,13 +23,16 @@ function AboutCard() {
           <ul>
             <li className="about-activity">
               <ImPointRight />
-              Playing PC Games
+              Anything Tech - Building PC's and PC gaming, building and flying FPV drones 
             </li>
             <li className="about-activity">
-              <ImPointRight /> Bodybuilding
+              <ImPointRight /> More Tech stuff - Mining crypto, programming software, driving on the racing simulator 
             </li>
             <li className="about-activity">
-              <ImPointRight /> Spending time with friends
+              <ImPointRight /> Bodybuilding and keeping fit
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Spending time and doing activities with my close friends
             </li>
           </ul>
         </blockquote>

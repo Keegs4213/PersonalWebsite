@@ -426,6 +426,9 @@ html {
   .about-img {
     padding-top: 0 !important;
   }
+  .about-activity {
+    font-size: .8rem;
+  }
 }
 
 /* For larger screens */
