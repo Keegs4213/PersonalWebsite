@@ -548,9 +548,6 @@ html {
 }
 .project-card img {
   border-radius: 15px 15px 0 0; /* Rounded corners on the top side of the image */
-  width: 100%; /* Ensure the image doesn't overflow the card */
-  max-height: 200px; /* Adjusted to match your existing style */
-  object-fit: cover; /* Maintain aspect ratio while covering the space */
 }
 .project-card-body {
   padding: 15px; /* Padding inside the card */
