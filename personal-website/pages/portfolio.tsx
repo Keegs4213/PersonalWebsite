@@ -4,6 +4,7 @@ import "../src/app/style.css";
 import "../src/app/globals.css";
 import Footer from "../src/app/components/Footer";
 import LoadingSpinner from "../src/app/components/LoadingSpinner";
+import Image from "next/image";
 
 function Portfolio() {
   const [loading, setLoading] = useState(true);
@@ -26,7 +27,7 @@ function Portfolio() {
     },
     {
       title: "Project 2 - FAUX",
-      imageUrl: "faux.png",
+      imageUrl: "/faux.PNG",
       githubUrl: "https://github.com/Keegs4213/Fakestore-React",
       liveUrl: "https://fakestore-react-two.vercel.app/",
       description:
@@ -34,7 +35,7 @@ function Portfolio() {
     },
     {
       title: "Project 3 - Pokedex",
-      imageUrl: "/pokedex.png",
+      imageUrl: "/pokedex.PNG",
       githubUrl: "https://github.com/Keegs4213/Pokedex-Frontend",
       liveUrl: "https://keegs4213.github.io/Pokedex-Frontend/",
       description:
@@ -42,7 +43,7 @@ function Portfolio() {
     },
     {
       title: "Project 4 - Monster Hunter Backend",
-      imageUrl: "/backend.png",
+      imageUrl: "/backend.PNG",
       githubUrl: "https://github.com/Keegs4213/Monster-Hunter-Backend",
       liveUrl: "",
       description:
@@ -65,9 +66,10 @@ function Portfolio() {
         <LoadingSpinner />
       ) : (
         <>
-          <Navigation></Navigation> <h1 style={{ fontSize: "2.1em", textAlign: "center" }}>
-                      My <strong className="purple">Projects</strong>
-                    </h1>
+          <Navigation></Navigation>{" "}
+          <h1 style={{ fontSize: "2.1em", textAlign: "center" }}>
+            My <strong className="purple">Projects</strong>
+          </h1>
           <div
             style={{
               display: "flex",
@@ -92,8 +94,10 @@ function Portfolio() {
                   flexDirection: "column",
                 }}
               >
-                <img
-                  style={{ width: "100%", height: "200px", objectFit: "cover" }}
+                <Image
+                  style={{ objectFit: "cover" }}
+                  width={1000}
+                  height={1000}
                   src={project.imageUrl}
                   alt={project.title}
                 />
