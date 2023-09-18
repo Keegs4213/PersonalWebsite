@@ -7,7 +7,7 @@ Welcome to the repository for my personal website! This project showcases my por
 ## Pages
 
 ### Home Page
-![Website screenshot](/homepage.png)
+![Website screenshot](/public/homepage.png)
 - **LinkedIn**: Link to my LinkedIn profile for professional connections and networking.
 - **Resume**: A downloadable link to my latest resume for potential employers to view and save.
 
