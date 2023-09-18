@@ -7,7 +7,7 @@ Welcome to the repository for my personal website! This project showcases my por
 ## Pages
 
 ### Home Page
-![Website screenshot](/public/homepage.png)
+![Website screenshot](/public/homepage.PNG)
 - **LinkedIn**: Link to my LinkedIn profile for professional connections and networking.
 - **Resume**: A downloadable link to my latest resume for potential employers to view and save.
 
@@ -17,11 +17,11 @@ Welcome to the repository for my personal website! This project showcases my por
 - **Skills**: A detailed list of my technical skill set acquired over the years.
 
 ### Portfolio
-![Website screenshot](/public/portfolio.png)
+![Website screenshot](/public/portfolio.PNG)
 - **Projects**: A showcase of some of the projects I have worked on, including a brief description and the technologies used for each.
 
 ### Contact
-![Website screenshot](/public/contact.png)
+![Website screenshot](/public/contactpage.PNG)
 - **Contact Form**: A simple form for visitors to quickly and easily get in touch with me.
 
 ## Technologies Used
