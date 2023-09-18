@@ -35,9 +35,8 @@ Welcome to the repository for my personal website! This project showcases my por
 To get started with development, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/Keegs4213/keegan-greig-personal-website.git`
-2. Navigate to the project folder: `cd keegan-greig-personal-website`
-3. Install the dependencies: `npm install`
-4. Start the development server: `npm run dev`
+2. Install the dependencies: `npm install`
+3. Start the development server: `npm run dev`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
