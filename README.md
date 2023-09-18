@@ -12,16 +12,16 @@ Welcome to the repository for my personal website! This project showcases my por
 - **Resume**: A downloadable link to my latest resume for potential employers to view and save.
 
 ### About Page
-![Website screenshot](/Aboutpage.png)
+![Website screenshot](/public/Aboutpage.PNG)
 - **Bio**: A section describing who I am and my journey in the software development field.
 - **Skills**: A detailed list of my technical skill set acquired over the years.
 
 ### Portfolio
-![Website screenshot](/portfolio.png)
+![Website screenshot](/public/portfolio.png)
 - **Projects**: A showcase of some of the projects I have worked on, including a brief description and the technologies used for each.
 
 ### Contact
-![Website screenshot](/contact.png)
+![Website screenshot](/public/contact.png)
 - **Contact Form**: A simple form for visitors to quickly and easily get in touch with me.
 
 ## Technologies Used
