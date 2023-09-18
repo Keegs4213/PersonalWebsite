@@ -45,15 +45,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 The website is deployed with Vercel. Any merges to the main branch will automatically deploy to production through Vercel's GitHub integration.
 
-## Contributing
 
-As this is a personal project, contributions are not currently open. However, feel free to fork the repository and explore the project on your own!
 
-## License
 
-This project is open-source and available under the [MIT License](LICENSE).
 
-## Contact
 
-For any inquiries or further discussion, reach me through [LinkedIn](https://linkedin.com/in/keegan-greig) or via the [contact form](https://keegan-greig.vercel.app/contact) on my website.
+
 
