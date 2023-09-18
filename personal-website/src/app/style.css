@@ -479,7 +479,6 @@ html {
 
 /* Background */
 .animated-bg {
-  background: rgb(131, 58, 180);
   background: linear-gradient(
     90deg,
     rgb(253, 163, 60) 0%,
@@ -487,9 +486,7 @@ html {
     rgb(255, 127, 127) 100%
   );
   background-repeat: no-repeat;
-  background-size: 400% 400%;
   background-position: center;
-  min-height: 100vh;
   align-items: center;
   animation: gradient 15s ease infinite;
 }
