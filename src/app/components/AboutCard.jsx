@@ -26,9 +26,6 @@ function AboutCard() {
               Building PCs and PC gaming/Sim racing, building and flying FPV drones 
             </li>
             <li className="about-activity">
-              <ImPointRight /> Programming software, mining crypto, I am passionate about all technology
-            </li>
-            <li className="about-activity">
               <ImPointRight /> Bodybuilding and keeping fit
             </li>
             <li className="about-activity">
