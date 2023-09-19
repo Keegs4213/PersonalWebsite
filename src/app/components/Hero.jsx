@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="h-screen flex justify-center items-center text-center">
+<div className="flex justify-center items-center text-center" style={{ height: '83vh' }}>
       
       <div>
         <h1 className="text-5xl mb-4" id="h1">

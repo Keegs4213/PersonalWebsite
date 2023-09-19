@@ -9,7 +9,9 @@ import SkillSet from "../src/app/components/Skills";
 import Image from "next/image";
 import Navigation from "../src/app/components/Navbar";
 import LoadingSpinner from "../src/app/components/LoadingSpinner";
-// Add embed google map location
+import { motion } from 'framer-motion';
+
+
 function About() {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -30,7 +32,33 @@ function About() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+    },
+    in: {
+      opacity: 1,
+    },
+    out: {
+      opacity: 0,
+    },
+  };
+
+const pageTransition = {
+  type: "tween",
+  ease: "anticipate",
+  duration: 3.0,
+};
+
+
   return (
+    <motion.div initial="initial"
+    animate="in"
+    exit="out"
+    variants={pageVariants}
+    transition={pageTransition}>
     <div
       style={{
         minHeight: "100vh",
@@ -119,7 +147,7 @@ function About() {
           <Footer></Footer>
         </>
       )}
-    </div>
+    </div></motion.div>
   );
 }
 

@@ -5,6 +5,7 @@ import "../src/app/globals.css";
 import Footer from "../src/app/components/Footer";
 import LoadingSpinner from "../src/app/components/LoadingSpinner";
 import Image from "next/image";
+import { motion } from 'framer-motion';
 
 function Portfolio() {
   const [loading, setLoading] = useState(true);
@@ -51,7 +52,34 @@ function Portfolio() {
     },
   ];
 
+
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+    },
+    in: {
+      opacity: 1,
+    },
+    out: {
+      opacity: 0,
+    },
+  };
+  
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 3.0,
+  };
+  
+
   return (
+    <motion.div
+  initial="initial"
+  animate="in"
+  exit="out"
+  variants={pageVariants}
+  transition={pageTransition}
+>
     <div
       className="container mx-auto p-4"
       style={{
@@ -154,7 +182,7 @@ function Portfolio() {
           <Footer></Footer>
         </>
       )}
-    </div>
+    </div></motion.div>
   );
 }
 export default Portfolio;

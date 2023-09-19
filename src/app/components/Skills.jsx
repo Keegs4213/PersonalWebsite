@@ -9,12 +9,21 @@ import {
   DiHtml5,
   DiCss3,
 } from "react-icons/di";
-import { SiTypescript } from "react-icons/si";
+import {
+  SiTypescript,
+  SiMicrosoftazure,
+  SiMongodb,
+  SiTailwindcss,
+} from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import "../style.css";
 
 export default function Skillset() {
   return (
-    <Row className="tech-icon-row" style={{ justifyContent: "center", paddingBottom: "50px" }}>
+    <Row
+      className="tech-icon-row"
+      style={{ justifyContent: "center", paddingBottom: "50px" }}
+    >
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 title="JavaScript" />
       </Col>
@@ -38,6 +47,18 @@ export default function Skillset() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiGit title="Git" />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <FaAws title="AWS" /> {/* AWS icon */}
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMicrosoftazure title="Microsoft Azure" /> {/* Azure icon */}
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMongodb title="MongoDB" /> {/* MongoDB icon */}
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiTailwindcss title="TailwindCSS" /> {/* MongoDB icon */}
       </Col>
     </Row>
   );
