@@ -14,7 +14,7 @@ function Portfolio() {
     // Simulate a network request to fetch data
     setTimeout(() => {
       setLoading(false);
-    }, 1000); // Simulate a 1-second loading delay
+    }, 2000); // Simulate a 1-second loading delay
   }, []);
 
   const projects = [
@@ -68,7 +68,7 @@ function Portfolio() {
   const pageTransition = {
     type: "tween",
     ease: "anticipate",
-    duration: 3.0,
+    duration: 5.0,
   };
   
 
