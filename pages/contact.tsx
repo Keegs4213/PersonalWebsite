@@ -14,32 +14,6 @@ function Contact() {
     message: "",
   });
 
-  // Function to handle form submission
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-
-    try {
-      // Send formData to your server using fetch or axios
-      const response = await fetch("/your-api-endpoint", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        // Handle successful submission, e.g., show a success message
-        console.log("Form submitted successfully!");
-      } else {
-        // Handle errors, e.g., display an error message
-        console.error("Form submission failed.");
-      }
-    } catch (error) {
-      console.error("An error occurred:", error);
-    }
-  };
-
   // Function to handle form input changes
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
@@ -134,7 +108,11 @@ function Contact() {
                 </div>
 
                 {/* Contact Form */}
-                <form onSubmit={handleSubmit} style={{ width: "100%" }}>
+                <form
+                  action="https://formspree.io/f/xwkdnokj"
+                  method="POST"
+                  style={{ width: "100%" }}
+                >
                   {" "}
                   {/* Set width to 100% */}
                   <div className="mb-4" style={{ width: "100%" }}>
@@ -206,18 +184,20 @@ function Contact() {
                       onChange={handleInputChange}
                     ></textarea>
                   </div>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <button
+                      type="submit"
+                      className="custom-button github"
+                      style={{
+                        marginTop: "10px",
+                        fontSize: "1.2rem",
+                        padding: "10px 20px",
+                      }}
+                    >
+                      Submit
+                    </button>
+                  </div>
                 </form>
-                <button
-                  type="submit"
-                  className="custom-button github"
-                  style={{
-                    marginTop: "10px",
-                    fontSize: "1.2rem",
-                    padding: "10px 20px",
-                  }}
-                >
-                  Submit
-                </button>
               </div>
             </div>
             <Footer></Footer>
