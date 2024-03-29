@@ -64,7 +64,7 @@ function About() {
 
   return (
     <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
-      <div style={{ minHeight: "120vh", display: "flex", flexDirection: "column", justifyItems: "space-around" }}>
+      <div style={{ height: "120vh", display: "flex", flexDirection: "column", justifyItems: "space-around" }}>
         {loading ? (
           <LoadingSpinner />
         ) : (
