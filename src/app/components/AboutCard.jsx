@@ -14,8 +14,7 @@ function AboutCard() {
             <br /> I am a recent graduate from the Institute of Data/<br></br>
             Auckland University of Technology Software Engineering programme.
             <br />
-            I am completing a career transition from Finance to Software
-            Development.
+            I have recently started my career as a developer
             <br />
             <br />
             Some of my hobbies are:
@@ -23,7 +22,7 @@ function AboutCard() {
           <ul>
             <li className="about-activity">
               <ImPointRight />
-              Building PCs and PC gaming/Sim racing, building and flying FPV drones 
+              Building PCs and Sim racing, building and flying FPV drones 
             </li>
             <li className="about-activity">
               <ImPointRight /> Bodybuilding and keeping fit

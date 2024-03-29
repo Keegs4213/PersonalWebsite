@@ -83,7 +83,7 @@ function Portfolio() {
     <div
       className="container mx-auto p-4"
       style={{
-        minHeight: "100vh",
+        minHeight: "120vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
