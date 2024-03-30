@@ -23,7 +23,7 @@ function AboutCard() {
                Bodybuilding and keeping fit 
             </li>
             <li className="about-activity">
-              <ImPointRight /> Anything tech related - Gaming, Sim racing, FPV drones etc. 
+              <ImPointRight /> Anything tech related - PC Gaming, Sim racing, FPV drones etc. 
             </li>
             <li className="about-activity">
               <ImPointRight /> Spending time and doing activities with my close friends
