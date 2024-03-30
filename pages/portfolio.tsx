@@ -83,7 +83,7 @@ function Portfolio() {
     <div
       className="container mx-auto p-4"
       style={{
-        height: "120vh",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -95,7 +95,7 @@ function Portfolio() {
       ) : (
         <>
           <Navigation></Navigation>{" "}
-          <h1 style={{ fontSize: "2.1em", textAlign: "center" }}>
+          <h1 style={{ fontSize: "2.1em", textAlign: "center", paddingTop: "20px", paddingBottom: "20px"}}>
             My <strong className="purple">Projects</strong>
           </h1>
           <div

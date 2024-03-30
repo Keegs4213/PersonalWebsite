@@ -64,14 +64,14 @@ function About() {
 
   return (
     <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
-      <div style={{ height: "120vh", display: "flex", flexDirection: "column", justifyItems: "space-around" }}>
+      <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyItems: "space-around" }}>
         {loading ? (
           <LoadingSpinner />
         ) : (
           <>
             <Navigation />
             {showContent && ( // Render content only when showContent is true
-              <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+              <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingTop: "20px" }}>
                 <Container>
                   <Row className="flex-md-row flex-column align-items-center justify-content-center">
                     <Col md={6} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>

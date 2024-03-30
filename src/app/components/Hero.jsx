@@ -32,7 +32,7 @@ export default function Hero() {
         </div>
         
         <div>
-        <a href="https://drive.google.com/file/d/1i65f5mxWnH4cwLJM40DhzYVbngaf3F2P/view" target="_blank">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vRBHdj3ywrr-NqcoCMzRi0V9NJAi7rGZROMAjVO5Wwqh3kNfYEcvkEOhEaG7dz3i-yWwSz4FvsbCk9R/pub" target="_blank">
           <button class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-500 rounded-full">
   Check my Resume
 </button>

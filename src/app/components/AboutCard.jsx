@@ -11,10 +11,8 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hello! I am <span className="purple">Keegan Greig </span>
             from <span className="purple"> Auckland, New Zealand.</span>
-            <br /> I am a recent graduate from the Institute of Data/<br></br>
-            Auckland University of Technology Software Engineering programme.
-            <br />
-            I have recently started my career as a developer
+            <br /> I graduated from the Institute of Data/<br />
+            Auckland University of Technology Software Engineering programme. <br />I have recently started my career as a developer and am eager to improve my programming skillset.
             <br />
             <br />
             Some of my hobbies are:
@@ -22,10 +20,10 @@ function AboutCard() {
           <ul>
             <li className="about-activity">
               <ImPointRight />
-              Building PCs and Sim racing, building and flying FPV drones 
+               Bodybuilding and keeping fit 
             </li>
             <li className="about-activity">
-              <ImPointRight /> Bodybuilding and keeping fit
+              <ImPointRight /> Anything tech related - Gaming, Sim racing, FPV drones etc. 
             </li>
             <li className="about-activity">
               <ImPointRight /> Spending time and doing activities with my close friends
