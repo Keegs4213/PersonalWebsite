@@ -4,7 +4,7 @@ import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
   return (
-    <div>
+    <div style={{paddingLeft: "20px", paddingRight: "20px"}}>
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">

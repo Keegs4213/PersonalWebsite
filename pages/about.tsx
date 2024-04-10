@@ -87,8 +87,8 @@ function About() {
                               src="/profile.jpg"
                               alt="Picture of Me"
                               className="circular-image"
-                              width={250}
-                              height={250}
+                              width={200}
+                              height={200}
                             />
                           </Tilt>
                         </div>
