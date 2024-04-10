@@ -51,13 +51,7 @@ function Contact() {
   };
 
   return (
-    <motion.div
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
-    >
+    
       <div
         className="container mx-auto p-4"
         style={{
@@ -204,7 +198,6 @@ function Contact() {
           </>
         )}
       </div>
-    </motion.div>
   );
 }
 

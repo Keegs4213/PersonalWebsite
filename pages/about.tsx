@@ -63,7 +63,7 @@ function About() {
   };
 
   return (
-    <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+   
       <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyItems: "space-around" }}>
         {loading ? (
           <LoadingSpinner />
@@ -122,7 +122,7 @@ function About() {
           </>
         )}
       </div>
-    </motion.div>
+    
   );
 }
 

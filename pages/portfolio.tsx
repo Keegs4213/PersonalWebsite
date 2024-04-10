@@ -73,13 +73,7 @@ function Portfolio() {
   
 
   return (
-    <motion.div
-  initial="initial"
-  animate="in"
-  exit="out"
-  variants={pageVariants}
-  transition={pageTransition}
->
+  
     <div
       className="container mx-auto p-4"
       style={{
@@ -182,7 +176,7 @@ function Portfolio() {
           <Footer></Footer>
         </>
       )}
-    </div></motion.div>
+    </div>
   );
 }
 export default Portfolio;
